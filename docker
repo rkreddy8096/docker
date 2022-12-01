@@ -1,0 +1,11 @@
+pipeline {
+    agent { label "jdk-11" }
+    stages {
+        stage('dockerexample') {
+            steps {
+                sh 'sudo usermod -aG docker ubuntu'
+                sh 'docker info'
+            }
+        }
+   }
+}
