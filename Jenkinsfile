@@ -1,5 +1,5 @@
 pipeline {
-    agent { labbel "jdk-11" }
+    agent { label "jdk-11" }
     stages {
         stage (dockerinstallation) {
             steps {
