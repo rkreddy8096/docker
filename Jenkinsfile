@@ -15,7 +15,7 @@ pipeline {
 
         stage (dockerimagebuild) {
             steps {
-                sh 'docker image build -t myimage -p 8081 .'
+                sh 'docker image build -t myimage .'
                 sh 'docker container run --name mycontainer -d myimage'
             }
         }
