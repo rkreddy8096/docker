@@ -1,7 +1,7 @@
 pipeline {
     agent { labbel "jdk-11" }
     stages {
-        stage (docker installation) {
+        stage (dockerinstallation) {
             steps {
                 sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
                 sh 'sh get-docker.sh'
@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage (docker image build) {
+        stage (dockerimagebuild) {
             steps {
                 sh 'docker image build --name myimage -p 8081 .'
                 sh 'docker container run --name mycontainer -d myimage'
